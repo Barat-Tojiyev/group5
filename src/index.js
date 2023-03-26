@@ -7,6 +7,6 @@ import './index.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>   
-   Hello React
+   Hello Group 5
   </React.StrictMode>
 )
