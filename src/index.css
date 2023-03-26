@@ -3,3 +3,50 @@
     padding: 0;
     font-family: sans-serif;
 }
+.container{
+    height: 100vh;
+    background-color: #6D9AC4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    height: 300px;
+    width: 450px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+
+}
+.text{
+    font-size: 25px;
+    color: #555;
+}
+.text_p{
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: #333;
+}
+input{
+    width: 99%;
+    height: 40px;
+    border: 2px solid #999;
+    outline: none;
+    padding-left: 1%;
+    border-radius: 5px;
+}
+button{
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: #EE5684;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 20px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    
+}
