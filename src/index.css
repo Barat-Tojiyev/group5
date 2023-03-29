@@ -3,3 +3,23 @@
     padding: 0;
     font-family: sans-serif;
 }
+
+.container{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+table{
+    width: 70%;
+
+}
+thead {
+    background-color: green;
+    color: white;
+}
+th,td{
+    height: 30px;
+    text-align: center;
+}
+tbody td{
+    border-bottom: 1px solid #aaa;
+}
