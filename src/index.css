@@ -3,3 +3,40 @@
     padding: 0;
     font-family: sans-serif;
 }
+.container{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left top,#5E35B0,#F8345D);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    width: 70%;
+    /* height: 400px; */
+    background: linear-gradient(to left top,#25BAB7,#25C18F);
+    box-shadow:  0 0 30px #25BAB7;
+    border-radius: 20px;
+    color: #fff;
+    overflow: hidden;
+}
+tbody td,thead th{
+    padding: 20px ;
+    border-bottom: 2px solid #66D3BA;
+    text-align: center;
+}
+tbody tr:hover{
+    background-color: #66D3BA;
+}
+tbody td:hover{
+    cursor: pointer;
+    background-color: yellow;
+    transform: scale(1.1);
+    color: red;
+}
