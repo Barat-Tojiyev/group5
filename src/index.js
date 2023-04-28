@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
+import { Main } from "./Components/Main";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>   
-   Hello Group 5
+   <Main/>
   </React.StrictMode>
 )
