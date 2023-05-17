@@ -10,17 +10,40 @@ export const Context = ({children}) => {
 switch(action.type){
   case 'korzinka': return{...state,korzinka:!state.korzinka}
 
-  case 'buy': let newProduct=state.data.map((value)=>value.id===action.payload.id&& {...value,quantity:true}) 
-  newProduct.filter((value)=>value.id && value.id)
-  console.log(newProduct[0]);
-   let add=state.newBasket.map((value)=>value.id =action.payload.id )
- console.log(add);
-  return{...state,newBasket:newProduct[0]}
+  case 'buy' : 
+  let newProduct=state.data.map((value)=> value.id===action.payload.id&& 
+  {...value,addtoCard:true,quantity:value.quantity+1})  
+  newProduct=newProduct.filter((value)=>value&& value)
+  let add=[...state.basket,...newProduct]
+  let newData=state.data.map((value)=> value.id ===action.payload.id ? {...newProduct[0]}:value) 
+
+  return{...state,data:newData,basket:add}
+
+  case 'plus':
+    let plus=state.basket.map((value)=>value.id ===action.payload.id &&
+    {...value,quantity:value.quantity+1})
+    plus=plus.filter((value)=>value&&value)
+    let newPlus=state.basket.map((value)=>value.id ===action.payload.id ?{...plus[0]}:value)
+    return {...state,basket:newPlus}
+    case 'minus':
+    let minus=state.basket.map((value)=>value.id ===action.payload.id &&
+    {...value,quantity:value.quantity-1})
+    minus=minus.filter((value)=>value&&value)
+    let newMinus=state.basket.map((value)=>value.id ===action.payload.id ?{...minus[0]}:value)
+    return {...state,basket:newMinus}
+case 'delet':
+  let delet=state.basket.filter((value)=>value.id !==action.payload.id) 
+ let deletProduct=state.data.map((value)=>value.id===action.payload.id && {...value,addtoCard:false} ) 
+ deletProduct=deletProduct.filter((value)=>value&& value)
+  
+  let newNew=state.data.map((value)=>value.id=== action.payload.id ? {...deletProduct[0]}:value)
+  // deletProduct=deletProduct.filter((value)=>value&& value)
+  return{...state,data:newNew,basket:delet}
 }
    },
    {
     data:product,
-    newBasket:[],
+    basket:[],
     korzinka:false
    })
   

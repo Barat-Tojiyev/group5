@@ -4,6 +4,7 @@ import { productContext } from '../../context'
 
 export const Navbar = () => {
   const [state,dispatch]=useContext(productContext)
+ 
   return (
     <Container>
      
@@ -12,7 +13,9 @@ export const Navbar = () => {
         <UL.LI>Home</UL.LI>
         <UL.LI>Shop</UL.LI>
       </UL>
-      <Button onClick={()=>dispatch({type:'korzinka'})}>korzinka</Button>
+      <Button onClick={()=>dispatch({type:'korzinka'})}>
+        korzinka {state.basket.length}
+      </Button>
     </Container>
   )
 }

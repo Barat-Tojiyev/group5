@@ -26,5 +26,14 @@ cursor: pointer;
     transform: scale(0.97);
 }
 `
+const Sale=styled.button`
+height: 29px;
+width: 80px;
+background-color:  #46A358;
+color: white;
+border: none;
+position: absolute;
+margin-top: 20px;
+`
 
-export {Container,Image,Description,Button}
+export {Container,Image,Description,Button,Sale}
